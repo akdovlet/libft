@@ -1,27 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 21:44:30 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/11 14:11:00 by akdovlet         ###   ########.fr       */
+/*   Created: 2023/09/11 15:04:02 by akdovlet          #+#    #+#             */
+/*   Updated: 2023/09/11 20:43:57 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memchr(const void *s, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	
+	int		flip;
+	long	nb;
+
 	i = 0;
-	while (i < n)
+	flip = 1;
+	nb = 0;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (c == ((unsigned char *)s)[i])
-			return ((unsigned char *)s + i);
+		if (nptr[i] == '-')
+			flip *= -1;
 		i++;
 	}
-	return (NULL);
+	while (ft_isdigit(nptr[i]))
+	{
+		nb = nb * 10 + nptr[i] - 48;
+		i++;
+	}
+	return (nb * flip);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	printf("%d\n", ft_atoi("  \n  \t 2147483647"));
+	printf("%d\n", atoi("  \n  \t 2147483647"));
 }
