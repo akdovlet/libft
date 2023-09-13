@@ -6,11 +6,11 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 00:29:24 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/11 00:35:14 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:16:10 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+/* #include <stddef.h>
 
 size_t my_strlen(const char *str) {
     size_t len = 0;
@@ -38,4 +38,4 @@ int main()
 {
 	char *str = "HEY SALUT COMMETN CA VA";
 	printf("%ld\n", my_strlen(str));
-}
+} */

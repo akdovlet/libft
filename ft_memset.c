@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 17:37:10 by adovleto          #+#    #+#             */
-/*   Updated: 2023/09/10 20:25:58 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:12:38 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;
-	unsigned char 	*str;
+	unsigned char	*str;
 
 	i = 0;
 	str = (unsigned char *)s;

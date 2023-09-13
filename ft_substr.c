@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 20:55:38 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/13 21:20:46 by akdovlet         ###   ########.fr       */
+/*   Created: 2023/09/12 10:41:37 by akdovlet          #+#    #+#             */
+/*   Updated: 2023/09/13 21:15:19 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
-	char	*str;
+	size_t	i;
+	size_t	size;
+	char	*sub;
 
-	str = (char *)s;
 	i = 0;
-	while (str[i] != (char)c)
+	size = (len - start) + 1;
+	sub = malloc(sizeof(char) * size);
+	if (!sub)
+		return (NULL);
+	while (size--)
 	{
-		if (str[i] == '\0')
-			return (0);
+		sub[i] = s[start + i];
 		i++;
 	}
-	return (str + i);
+	sub[i] = '\0';
+	return (sub);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+// 	char str[] = "You don't negotiate with weakness";
+// 	printf("%s\n", ft_substr(str, 0, strlen(str)));
+// }

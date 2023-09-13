@@ -1,38 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 19:33:18 by adovleto          #+#    #+#             */
-/*   Updated: 2023/09/13 21:17:34 by akdovlet         ###   ########.fr       */
+/*   Created: 2023/09/13 20:12:06 by akdovlet          #+#    #+#             */
+/*   Updated: 2023/09/13 20:44:04 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
-	char	*dst;
-	char	*source;
+	size_t	size;
+	char	*mapi;
 
-	dst = (unsigned char *) dest;
-	source = (unsigned char *) src;
-	if (!dest && !src)
+	if (!s || !f)
 		return (NULL);
-	if (n == 0)
-		return (dest);
-	if (dest > src)
+	i = 0;
+	size = ft_strlen(s);
+	mapi = malloc(sizeof(char) * (size + 1));
+	ft_strlcpy(mapi, s, size + 1);
+	while (mapi[i])
 	{
-		while (n--)
-			dst[n] = source[n];
+		mapi[i] = (*f)(i, mapi[i]);
+		i++;
 	}
-	else
-	{
-		while (n--)
-			*dst++ = *source++;
-	}
-	return (dest);
+	return (mapi);
 }
+
+/* #include <stdio.h>
+
+char	ft_test(unsigned int index, char c)
+{
+	c += index;
+	return (c);
+}
+
+int main()
+{
+	char	*str = "ABCDEFG";
+	printf("%s\n", ft_strmapi(str, ft_test));
+} */

@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 21:44:30 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/11 14:11:00 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:21:02 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 20:51:53 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/11 21:07:30 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:12:15 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,4 @@ char	*ft_strdup(const char *s)
 	}
 	dup[i] = '\0';
 	return (dup);
-}
-
-int	main()
-{
-	
 }

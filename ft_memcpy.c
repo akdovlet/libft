@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 18:05:30 by adovleto          #+#    #+#             */
-/*   Updated: 2023/09/10 20:25:52 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:19:48 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*memcpy(void *dest, const void *src, size_t n)
 {
-	size_t 			i;
-	unsigned char 	*dst;
-	unsigned char 	*source;
+	size_t			i;
+	unsigned char	*dst;
+	unsigned char	*source;
 
 	i = 0;
 	dst = (unsigned char *)dest;

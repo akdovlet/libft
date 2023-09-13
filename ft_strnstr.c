@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:27:55 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/11 15:03:06 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:21:41 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		{
 			j++;
 			if (!little[j])
-				return ((char *)(big + i)); 
+				return ((char *)(big + i));
 		}
-		i++;		
+		i++;
 	}
 	return (0);
 }

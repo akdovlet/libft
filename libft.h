@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 17:27:13 by adovleto          #+#    #+#             */
-/*   Updated: 2023/09/11 13:57:19 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:22:48 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stddef.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -30,7 +31,6 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);

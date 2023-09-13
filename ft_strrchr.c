@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 21:03:10 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/10 21:04:14 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:16:48 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*strchr(const char *s, int c)
 {
 	int		i;
-	char 	*str;
+	char	*str;
 
 	str = (char *)s;
 	i = ft_strlen(str) + 1;
@@ -25,5 +25,5 @@ char	*strchr(const char *s, int c)
 			return (str + i);
 		i++;
 	}
-	return (0);	
+	return (0);
 }
