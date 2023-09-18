@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 10:41:56 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/18 14:35:54 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/18 18:22:14 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	node->content = content;
 	node->next = NULL;
+	return (node);
 }
