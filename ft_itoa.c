@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:11:04 by celeste           #+#    #+#             */
-/*   Updated: 2023/09/13 20:11:17 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/18 17:47:37 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ char	*ft_itoa(int n)
 
 	ln = (long) n;
 	size = ft_nbcount(ln);
-	nb = malloc(sizeof(char) * (size));
+	nb = ft_calloc(sizeof(char), size + 1);
 	if (!nb)
 		return (NULL);
-	nb[size] = '\0';
 	if (ln < 0)
 	{
 		ln *= -1;
@@ -57,9 +56,11 @@ char	*ft_itoa(int n)
 	return (nb);
 }
 
-/* #include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-	printf("%s\n", ft_itoa(-2147483648));
-} */
+// int main()
+// {
+// 	char *str = ft_itoa(2147483647);
+// 	printf("%s\n", str);
+// 	free(str);
+// }

@@ -6,29 +6,34 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 10:41:37 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/13 21:15:19 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/18 17:28:02 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static	int	ft_absolute(size_t i, size_t j)
+{
+	if (i < j)
+		return (i);
+	else
+		return (j);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	size;
 	char	*sub;
 
-	i = 0;
-	size = (len - start) + 1;
-	sub = malloc(sizeof(char) * size);
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_calloc(1, 1));
+	s += start;
+	len = ft_absolute(len, ft_strlen(s));
+	sub = calloc(1, len + 1);
 	if (!sub)
 		return (NULL);
-	while (size--)
-	{
-		sub[i] = s[start + i];
-		i++;
-	}
-	sub[i] = '\0';
+	sub = ft_memcpy(sub, s, len);
 	return (sub);
 }
 

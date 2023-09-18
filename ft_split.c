@@ -3,35 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: celeste <celeste@student.42.fr>            +#+  +:+       +#+        */
+/*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 12:51:50 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/13 17:32:41 by celeste          ###   ########.fr       */
+/*   Updated: 2023/09/18 18:12:45 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_charcheck(char s, char c)
+int	ft_countword(char const *str, char c)
 {
-	if (s == c)
-		return (1);
-	return (0);
-}
+	int	i;
+	int	count;
 
-size_t	ft_countwords(const char *s, char c)
-{
-	size_t		i;
-	size_t		count;
-
-	i = -1;
+	i = 0;
 	count = 0;
-	while (s[++i] && i < ft_strlen(s))
+	while (str[i])
 	{
-		if (s[i] && !ft_charcheck(s[i], c))
+		if (str[i] && str[i] != c)
 		{
 			count++;
-			while (s[i] && !ft_charcheck(s[i], c))
+			while (str[i] && str[i] != c)
 				i++;
 		}
 		else
@@ -40,65 +34,70 @@ size_t	ft_countwords(const char *s, char c)
 	return (count);
 }
 
-char	*ft_sdup(const char *s, char c, size_t index, size_t *retindex)
+int	ft_charcount(char const *s, int index, char c)
 {
-	unsigned int	ccount;
-	size_t			start;
-	size_t			i;
-	char			*sdup;
+	int	count;
 
-	ccount = 0;
-	start = index;
-	i = 0;
-	while (s[start] && !ft_charcheck(s[start], c))
+	count = 0;
+	while (s[index] && s[index] != c)
 	{
-		ccount++;
-		start++;
+		count++;
+		index++;
 	}
-	sdup = malloc(sizeof(char) * (ccount + 1));
-	if (!sdup)
-		return (NULL);
-	while (s[index] && !ft_charcheck(s[index], c))
-		sdup[i++] = s[index++];
-	*retindex = index;
-	sdup[i] = '\0';
-	return (sdup);
+	return (count);
 }
 
-char	*ft_free(char **strs, size_t size)
+char	*ft_strndup(char const *s, int *retindex, int index, int n)
 {
-	size_t	i;
+	int		i;
+	char	*dup;
 
 	i = 0;
-	while (i < size)
+	dup = malloc(sizeof(char) * (n + 1));
+	if (!dup)
+		return (NULL);
+	while (s[index] && i < n)
+	{
+		dup[i] = s[index];
+		i++;
+		index++;
+	}
+	*retindex = index;
+	dup[i] = '\0';
+	return (dup);
+}
+
+void	ft_free(char **strs, int i)
+{
+	while (i >= 0)
 	{
 		free(strs[i]);
-		i++;
+		i--;
 	}
 	free(strs);
-	return (NULL);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	size_t	size;
+	int		i;
+	int		j;
+	int		wordcount;
 	char	**splitter;
 
-	i = -1;
-	j = 0;
-	size = ft_countwords(s, c);
-	splitter = malloc(sizeof(char *) * (size + 1));
-	if (!splitter)
+	if (!s)
 		return (NULL);
-	while (j < size && s[++i])
+	i = 0;
+	j = 0;
+	wordcount = ft_countword(s, c);
+	splitter = malloc(sizeof(char *) * (wordcount + 1));
+	while (j < wordcount)
 	{
-		if (s[i] && !ft_charcheck(s[i], c))
+		if (s[i] != c)
 		{
-			splitter[j] = ft_sdup(s, c, i, &i);
-			if (!splitter[j++])
+			splitter[j] = ft_strndup(s, &i, i, ft_charcount(s, i, c));
+			if (!splitter[j])
 				return (ft_free(splitter, j), NULL);
+			j++;
 		}
 		else
 			i++;
@@ -106,18 +105,3 @@ char	**ft_split(const char *s, char c)
 	splitter[j] = 0;
 	return (splitter);
 }
-
-// #include <stdio.h>
-// int main(int ac, char **av)
-// {
-// 	if (ac == 3)
-// 	{
-// 		int	i;
-// 		char **split;
-// 		i = -1;
-// 		split = ft_split(av[1], av[2][0]);
-// 		while (split[++i])
-// 			printf("%s\n", split[i]);
-// 		ft_free(split, i);
-// 	}
-// }

@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 20:55:38 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/18 13:54:50 by akdovlet         ###   ########.fr       */
+/*   Created: 2023/09/18 12:19:42 by akdovlet          #+#    #+#             */
+/*   Updated: 2023/09/18 12:58:24 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		i;
-	char	*str;
+	t_list	*map;
+	t_list	*node;
 
-	str = (char *)s;
-	i = 0;
-	while (str[i] != (char)c)
+	map = 0;
+	if (!lst || !f)
+		return (NULL);
+	while (lst)
 	{
-		if (str[i] == '\0')
-			return (0);
-		i++;
+		node = ft_lstnew(f(lst->content));
+		if (!node)
+		{
+			ft_lstclear(&node, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&map, node);
+		lst = lst->next;
 	}
-	return (str + i);
+	return (map);
 }
