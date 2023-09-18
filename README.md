@@ -44,8 +44,8 @@ him.
 ‘He’s not a foreigner... He’s not a foreigner...’ he thought, ‘he’s a most
 peculiar specimen ... but, excuse me, who is he then? ...’
 
-You’d like to smoke, I see?’ the stranger addressed Homeless unex\-
-pectedly. “Which kind do you prefer?’
+You’d like to smoke, I see?’ the stranger addressed Homeless unexpectedly.
+“Which kind do you prefer?’
 
 ‘What, have you got several?’ the poet, who had run out of cigarettes,
 asked glumly.
@@ -84,11 +84,11 @@ objected:
 know more or less certainly. It goes without saying, if a brick should fall
 on my head on Bronnaya. . ‘
 
-‘No brick,’ the stranger interrupted imposingly, ‘will ever fall on any\-
+‘No brick,’ the stranger interrupted imposingly, ‘will ever fall on any\
 one’s head just out of the blue. In this particular case, I assure you, you
 are not in danger of that at all. You will die a different death.’
-‘Maybe you know what kind precisely?’ Berlioz inquired with per\-
-fectly natural irony, getting drawn into an utterly absurd conversation.
+‘Maybe you know what kind precisely?’ Berlioz inquired with perfectly
+natural irony, getting drawn into an utterly absurd conversation.
 
 And will tell me?’
 
@@ -106,8 +106,8 @@ and Berlioz asked, grinning crookedly:
 
 ‘No,’ replied his interlocutor, ‘by a Russian woman, a Komsomol girl.’
 
-‘Hm...’ Berlioz mumbled, vexed at the stranger’s little joke, ‘well, ex\-
-cuse me, but that’s not very likely.’
+‘Hm...’ Berlioz mumbled, vexed at the stranger’s little joke, ‘well, excuse
+me, but that’s not very likely.’
 
 ‘And I beg you to excuse me,’ the foreigner replied, ‘but it’s so. Ah, yes,
 I wanted to ask you, what are you going to do tonight, if it’s not a secret?’
@@ -121,7 +121,7 @@ it.’
 ‘Why not?’
 
 ‘Because,’ the foreigner replied and, narrowing his eyes, looked into
-the sky, where, anticipating the cool of the evening, black birds were trac\-
-ing noiselessly, ‘Annushka has already bought the sunflower oil, and has
+the sky, where, anticipating the cool of the evening, black birds were tracing
+noiselessly, ‘Annushka has already bought the sunflower oil, and has
 not only bought it, but has already spilled it. So the meeting will not take
 place.’
