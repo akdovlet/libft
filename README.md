@@ -5,8 +5,9 @@ one may ask, who governs human life and, in general, the whole order of
 things on earth?’
 
 ‘Man governs it himself,’ Homeless angrily hastened to reply to this
-admittedly none\-too\-clear question. ‘Pardon me,’ the stranger responded
-gently, ‘but in order to govern, one needs, after all, to have a precise plan
+admittedly none\-too\-clear question.
+‘Pardon me,’ the stranger responded gently, 
+‘but in order to govern, one needs, after all, to have a precise plan
 for certain, at least somewhat decent, length of time. Allow me to ask you,
 then, how man can govern, if he is not only deprived of the opportunity
 of making a plan for at least some ridiculously short period \- well, say, a
