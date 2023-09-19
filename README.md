@@ -90,9 +90,8 @@ one’s head just out of the blue. In this particular case, I assure you, you
 are not in danger of that at all. You will die a different death.’
 
 ‘Maybe you know what kind precisely?’ Berlioz inquired with perfectly
-natural irony, getting drawn into an utterly absurd conversation.
-
-And will tell me?’
+natural irony, getting drawn into an utterly absurd conversation. 
+'And will tell me?’
 
 ‘Willingly,’ the unknown man responded. He looked Berlioz up and
 down as if he were going to make him a suit, muttered through his teeth
@@ -104,7 +103,7 @@ something like: ‘One, two ... Mercury in the second house ... moon gone
 Homeless goggled his eyes wildly and spitefully at the insouciant stranger,
 and Berlioz asked, grinning crookedly:
 
-‘By whom precisely? Enemies? Interventionists?’ 
+‘By whom precisely? Enemies? Interventionists?’
 
 ‘No,’ replied his interlocutor, ‘by a Russian woman, a Komsomol girl.’
 
