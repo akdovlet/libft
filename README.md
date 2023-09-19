@@ -77,6 +77,7 @@ However, before he managed to utter these words, the foreigner spoke:
 ‘Yes, man is mortal, but that would be only half the trouble. The worst
 of it is that he’s sometimes unexpectedly mortal \- there’s the trick! And
 generally he’s unable to say what he’s going to do this same evening.’
+
 ‘What an absurd way of putting the question ...’ Berlioz thought and
 objected:
 
@@ -87,6 +88,7 @@ on my head on Bronnaya. . ‘
 ‘No brick,’ the stranger interrupted imposingly, ‘will ever fall on any\
 one’s head just out of the blue. In this particular case, I assure you, you
 are not in danger of that at all. You will die a different death.’
+
 ‘Maybe you know what kind precisely?’ Berlioz inquired with perfectly
 natural irony, getting drawn into an utterly absurd conversation.
 
