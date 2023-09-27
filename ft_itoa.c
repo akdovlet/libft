@@ -6,13 +6,13 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 17:11:04 by celeste           #+#    #+#             */
-/*   Updated: 2023/09/18 17:47:37 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/27 19:43:56 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbcount(long n)
+static int	ft_nbcount(long n)
 {
 	int	count;
 

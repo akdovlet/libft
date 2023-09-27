@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:12:06 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/13 20:44:04 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/27 17:47:48 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	size = ft_strlen(s);
 	mapi = malloc(sizeof(char) * (size + 1));
+	if (!mapi)
+		return (NULL);
 	ft_strlcpy(mapi, s, size + 1);
 	while (mapi[i])
 	{

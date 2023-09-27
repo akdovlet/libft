@@ -6,14 +6,14 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 12:51:50 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/18 18:12:45 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/27 20:08:21 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_countword(char const *str, char c)
+static int	ft_countword(char const *str, char c)
 {
 	int	i;
 	int	count;
@@ -34,7 +34,7 @@ int	ft_countword(char const *str, char c)
 	return (count);
 }
 
-int	ft_charcount(char const *s, int index, char c)
+static int	ft_charcount(char const *s, int index, char c)
 {
 	int	count;
 
@@ -47,7 +47,7 @@ int	ft_charcount(char const *s, int index, char c)
 	return (count);
 }
 
-char	*ft_strndup(char const *s, int *retindex, int index, int n)
+static char	*ft_strndup_custom(char const *s, int *retindex, int index, int n)
 {
 	int		i;
 	char	*dup;
@@ -67,7 +67,7 @@ char	*ft_strndup(char const *s, int *retindex, int index, int n)
 	return (dup);
 }
 
-void	ft_free(char **strs, int i)
+static void	ft_free(char **strs, int i)
 {
 	while (i >= 0)
 	{
@@ -90,17 +90,17 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	wordcount = ft_countword(s, c);
 	splitter = malloc(sizeof(char *) * (wordcount + 1));
+	if (!splitter)
+		return (NULL);
 	while (j < wordcount)
 	{
 		if (s[i] != c)
 		{
-			splitter[j] = ft_strndup(s, &i, i, ft_charcount(s, i, c));
-			if (!splitter[j])
-				return (ft_free(splitter, j), NULL);
-			j++;
+			splitter[j] = ft_strndup_custom(s, &i, i, ft_charcount(s, i, c));
+			if (!splitter[j++])
+				return (ft_free(splitter, j - 1), NULL);
 		}
-		else
-			i++;
+		i++;
 	}
 	splitter[j] = 0;
 	return (splitter);

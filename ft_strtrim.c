@@ -6,13 +6,13 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:03:57 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/12 12:30:38 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/27 19:41:43 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_charcheck(char const c, char const *set)
+static size_t	ft_charcheck(char const c, char const *set)
 {
 	size_t	i;
 

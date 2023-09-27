@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 10:41:37 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/18 17:28:02 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/27 17:31:35 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_calloc(1, 1));
 	s += start;
 	len = ft_absolute(len, ft_strlen(s));
-	sub = calloc(1, len + 1);
+	sub = ft_calloc(sizeof(char), len + 1);
 	if (!sub)
 		return (NULL);
 	sub = ft_memcpy(sub, s, len);

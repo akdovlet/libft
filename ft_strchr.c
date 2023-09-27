@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:55:38 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/18 13:54:50 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:41:31 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,10 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (str + i);
 }
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	printf("%s\n", ft_strchr("Hello how you doing", ' '));
+// }

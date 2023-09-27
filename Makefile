@@ -6,7 +6,7 @@
 #    By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/15 16:05:42 by akdovlet          #+#    #+#              #
-#    Updated: 2023/09/26 19:51:20 by akdovlet         ###   ########.fr        #
+#    Updated: 2023/09/27 23:21:02 by akdovlet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,12 +96,14 @@ $(NAME): title ${OBJS}
 	@ar rc $(NAME) ${OBJS}
 
 %.o:%.c ${HEADER}
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 bonus: ${OBJS} ${BONUSOBJS}
-	ar rc $(NAME) ${OBJS} ${BONUSOBJS}
+	@ar rc $(NAME) ${OBJS} ${BONUSOBJS}
 
 title:
+	clear
+	@echo "$$ISIS"
 	@echo "$$AK"
 
 clean:

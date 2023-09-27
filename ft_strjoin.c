@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 10:51:59 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/13 21:18:41 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/27 17:42:36 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = -1;
 	j = -1;
-	size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	fusion = malloc(sizeof(char) * size);
+	if (!s1 && !s2)
+		return (NULL);
+	size = ft_strlen(s1) + ft_strlen(s2);
+	fusion = malloc(sizeof(char) * (size + 1));
 	if (!fusion)
 		return (NULL);
 	while (s1[++i])

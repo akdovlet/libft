@@ -6,7 +6,7 @@
 /*   By: akdovlet <akdovlet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:27:55 by akdovlet          #+#    #+#             */
-/*   Updated: 2023/09/13 21:21:41 by akdovlet         ###   ########.fr       */
+/*   Updated: 2023/09/27 19:51:48 by akdovlet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (!*little)
 		return ((char *)big);
+	if (!big)
+		return (NULL);
 	while (big[i] && i < len)
 	{
 		j = 0;
@@ -31,7 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 // #include <stdio.h>
@@ -40,10 +42,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 // int main()
 // {
-// 	char str[] = "Come find me motherfucker";
-// 	char tf[] = "xe";
-// 	char str2[] = "Come find me motherfucker";
-// 	char tf2[] = "xe";
-// 	printf("%s\n", ft_strnstr(str, tf, 5));
-// 	printf("%s\n", strnstr(str2, tf2, 4));
+// 	// char str[] = "Come find me motherfucker";
+// 	// char tf[] = "X";
+// 	// char str2[] = "Come find me motherfucker";
+// 	// char tf2[] = "X";
+// 	// char	*ret = ft_strnstr(str, tf, 4);
+// 	// char	*ret2 = strnstr(str2, tf2, 4);
+// 	char	*test = NULL;
+// 	printf("%s\n", test);
+// 	// printf("%s\n", ret2);
 // }
