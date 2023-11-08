@@ -84,7 +84,7 @@ CC = cc
 
 CCFLAGS = -Wall -Werror -Wextra
 
-RM = rm -f
+RM = rm -rf
 
 OBJS := ${SRCS:.c=.o}
 
@@ -92,8 +92,8 @@ BONUSOBJS := ${BONUS:.c=.o}
 
 all: title ${NAME}
 
-$(NAME): title ${OBJS}
-	@ar rc $(NAME) ${OBJS}
+$(NAME): ${OBJS}
+	ar rc $(NAME) ${OBJS}
 
 %.o:%.c ${HEADER}
 	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -102,8 +102,6 @@ bonus: ${OBJS} ${BONUSOBJS}
 	@ar rc $(NAME) ${OBJS} ${BONUSOBJS}
 
 title:
-	clear
-	@echo "$$ISIS"
 	@echo "$$AK"
 
 clean:
@@ -115,6 +113,13 @@ fclean: clean
 	@echo "\033[0;32mArchive file ${NAME} has been deleted\033[0m"
 
 re: fclean all
+
+######################
+#	Unit tester rule #
+######################
+# so:
+# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+# 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 .PHONY:
 	clean all fclean re bonus title
